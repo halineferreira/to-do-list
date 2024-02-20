@@ -4,6 +4,8 @@ type Props = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
 >;
-export function Input({ placeholder }: Props) {
-  return <input placeholder={placeholder} className={styles.input}></input>;
+export function Input({ placeholder, ...rest }: Props) {
+  return (
+    <input placeholder={placeholder} className={styles.input} {...rest}></input>
+  );
 }
